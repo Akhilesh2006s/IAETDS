@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 30% 6%;
+    --foreground: 40 20% 92%;
+
+    --card: 220 28% 10%;
+    --card-foreground: 40 20% 92%;
+
+    --popover: 220 28% 10%;
+    --popover-foreground: 40 20% 92%;
+
+    --primary: 42 76% 55%;
+    --primary-foreground: 220 30% 6%;
+
+    --secondary: 215 50% 23%;
+    --secondary-foreground: 40 20% 92%;
+
+    --muted: 220 20% 14%;
+    --muted-foreground: 215 15% 55%;
+
+    --accent: 215 60% 35%;
+    --accent-foreground: 40 20% 92%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 20% 18%;
+    --input: 215 20% 18%;
+    --ring: 42 76% 55%;
+
+    --radius: 0.5rem;
+
+    --navy: 220 30% 6%;
+    --navy-light: 215 50% 23%;
+    --royal: 215 60% 35%;
+    --gold: 42 76% 55%;
+    --gold-light: 42 60% 70%;
+    --platinum: 40 10% 85%;
+    --platinum-light: 40 20% 92%;
+
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Inter', system-ui, sans-serif;
+
+    --sidebar-background: 220 28% 10%;
+    --sidebar-foreground: 40 20% 92%;
+    --sidebar-primary: 42 76% 55%;
+    --sidebar-primary-foreground: 220 30% 6%;
+    --sidebar-accent: 215 50% 23%;
+    --sidebar-accent-foreground: 40 20% 92%;
+    --sidebar-border: 215 20% 18%;
+    --sidebar-ring: 42 76% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer components {
+  .gold-gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(42 76% 55%), hsl(42 60% 70%), hsl(42 76% 55%));
+  }
+
+  .section-gradient {
+    background: linear-gradient(180deg, hsl(220 30% 6%) 0%, hsl(220 28% 10%) 100%);
+  }
+
+  .card-gradient {
+    background: linear-gradient(145deg, hsl(220 28% 10%) 0%, hsl(215 50% 23% / 0.3) 100%);
+  }
+
+  .gold-border {
+    border: 1px solid hsl(42 76% 55% / 0.2);
+  }
+
+  .gold-glow {
+    box-shadow: 0 0 40px hsl(42 76% 55% / 0.08), 0 0 80px hsl(42 76% 55% / 0.04);
+  }
+
+  .hero-gradient {
+    background: radial-gradient(ellipse at 50% 0%, hsl(215 60% 35% / 0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 50%, hsl(42 76% 55% / 0.05) 0%, transparent 50%),
+                hsl(220 30% 6%);
+  }
+
+  .divider-gold {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(42 76% 55% / 0.4), transparent);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
