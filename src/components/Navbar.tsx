@@ -23,12 +23,12 @@ const Navbar = () => {
         scrolled ? "bg-background/90 backdrop-blur-md border-b border-border" : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-3 md:py-4">
         <Link to="/" className="flex items-center">
           <img 
-            src="/IAEDTS.jpg" 
+            src="/logo.png" 
             alt="IAETDS Logo" 
-            className="h-10 w-auto object-contain"
+            className="h-24 md:h-26 w-auto object-contain"
           />
         </Link>
         <div className="hidden md:flex items-center gap-8 font-sans text-xs tracking-[0.2em] uppercase">
