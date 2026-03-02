@@ -28,18 +28,14 @@ const HeroSection = () => {
           </span>
         </motion.div>
 
-        <motion.div
+        <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="mb-8"
+          className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4"
         >
-          <img 
-            src="/IAEDTS.jpg" 
-            alt="IAETDS Logo" 
-            className="h-32 md:h-40 lg:h-48 w-auto mx-auto object-contain"
-          />
-        </motion.div>
+          <span className="gold-gradient-text">IAETDS</span>
+        </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
